@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Franck - Bootstrap Templates</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/solid.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- Splide core CSS -->
+    <link href="vendor/jcarousel/splide.min.css" rel="stylesheet">
+    <!-- Pagination core CSS -->
+    <link rel="stylesheet" href="vendor/pagination/css/simplePagination.css">
+    <!-- News Ticker core CSS -->
+    <link href="vendor/ticker/css/ticker-style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <section>
+        <div class="page-content">
+            <ul>
+                <li>This is Page 1</li>
+                <li>This is Page 2</li>
+                <li>This is Page 3</li>
+                <li>This is Page 4</li>
+                <li>This is Page 5</li>
+                <li>This is Page 6</li>
+                <li>This is Page 7</li>
+                <li>This is Page 8</li>
+                <li>This is Page 9</li>
+                <li>This is Page 10</li>
+            </ul>
+        </div>
+        <div id="pagination-container"></div>
+    </section>
+
+    <section>
+        <div class="page-content-2">
+            <ul>
+                <li>This is Page 1</li>
+                <li>This is Page 2</li>
+                <li>This is Page 3</li>
+                <li>This is Page 4</li>
+                <li>This is Page 5</li>
+                <li>This is Page 6</li>
+                <li>This is Page 7</li>
+                <li>This is Page 8</li>
+                <li>This is Page 9</li>
+                <li>This is Page 10</li>
+            </ul>
+        </div>
+        <div id="pagination-container-2"></div>
+    </section>
+
+    <section>
+        <div class="page-content-3">
+            <ul>
+                <li>This is Page 1</li>
+                <li>This is Page 2</li>
+                <li>This is Page 3</li>
+                <li>This is Page 4</li>
+                <li>This is Page 5</li>
+                <li>This is Page 6</li>
+                <li>This is Page 7</li>
+                <li>This is Page 8</li>
+                <li>This is Page 9</li>
+                <li>This is Page 10</li>
+            </ul>
+        </div>
+        <div id="pagination-container-3"></div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Splide core JavaScript -->
+    <script src="vendor/jcarousel/splide.js"></script>
+    <!-- Pagination core JavaScript -->
+    <script src="vendor/pagination/js/jquery.simplePagination.js"></script>
+    <!-- Ticker core JavaScript -->
+    <script src="vendor/ticker/js/jquery.newsTicker.js"></script>
+    <!-- main core JavaScript -->
+    <script>
+        //Pagination 
+        $(document).ready(function () {
+            var itemsOnPage = 3;
+            $('#pagination-container').pagination({
+                items: $('.page-content ul li').length,
+                itemsOnPage: itemsOnPage,
+                cssStyle: 'light-theme',
+                onPageClick: function (pageNumber, event) {
+                    var pageN = pageNumber != 0 ? (pageNumber - 1) : pageNumber;
+                    var from = (pageN * itemsOnPage) + 1;
+                    var to = (pageNumber * itemsOnPage);
+                    console.log('page :' + pageNumber + ' from: ' + from + ' to :' + to);
+                    $('.page-content ul li').css({
+                        'display': 'none'
+                    });
+                    for (var i = from; i <= to; i++) {
+                        console.log('loop :' + i);
+                        $('.page-content ul li:eq(' + (i - 1) + ')').css({
+                            'display': 'block'
+                        });
+                    }
+                },
+                onInit: function () {
+                    $('.page-content ul li').css({
+                        'display': 'none'
+                    });
+                    for (var i = 0; i < itemsOnPage; ++i) {
+                        $('.page-content ul li:eq(' + i + ')').css({
+                            'display': 'block'
+                        });
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var itemsOnPage = 3;
+            $('#pagination-container-3').pagination({
+                items: $('.page-content ul li').length,
+                itemsOnPage: itemsOnPage,
+                cssStyle: 'light-theme',
+                onPageClick: function (pageNumber, event) {
+                    var pageN = pageNumber != 0 ? (pageNumber - 1) : pageNumber;
+                    var from = (pageN * itemsOnPage) + 1;
+                    var to = (pageNumber * itemsOnPage);
+                    console.log('page :' + pageNumber + ' from: ' + from + ' to :' + to);
+                    $('.page-content ul li').css({
+                        'display': 'none'
+                    });
+                    for (var i = from; i <= to; i++) {
+                        console.log('loop :' + i);
+                        $('.page-content ul li:eq(' + (i - 1) + ')').css({
+                            'display': 'block'
+                        });
+                    }
+                },
+                onInit: function () {
+                    $('.page-content ul li').css({
+                        'display': 'none'
+                    });
+                    for (var i = 0; i < itemsOnPage; ++i) {
+                        $('.page-content ul li:eq(' + i + ')').css({
+                            'display': 'block'
+                        });
+                    }
+                }
+            });
+        });
+
+        //Pagination 
+        var items = $(".page-content-2 ul li");
+        var numItems = items.length;
+        var perPage = 3;
+        items.slice(perPage).hide();
+        $('#pagination-container-2').pagination({
+            items: numItems,
+            itemsOnPage: perPage,
+            prevText: "&laquo;",
+            nextText: "&raquo;",
+            onPageClick: function (pageNumber) {
+                var showFrom = perPage * (pageNumber - 1);
+                var showTo = showFrom + perPage;
+                items.hide().slice(showFrom, showTo).show();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

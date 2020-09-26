@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Franck - Bootstrap Templates</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/solid.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- jCarouselLite core CSS -->
+    <link href="vendor/jCarouselLite/css/jCarouselLite.css" rel="stylesheet">
+    <!-- Pagination core CSS -->
+    <link rel="stylesheet" href="vendor/pagination/css/simplePagination.css">
+    <!-- News Ticker core CSS -->
+    <link href="vendor/ticker/css/ticker-style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        #slider-wrapper {
+            padding: 40px;
+        }
+
+        .card-img-overlay ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .card-img-overlay li {
+            position: relative;
+            display: inline-block;
+            width: 6rem;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .card-img-overlay li a,
+        .card-img-overlay li a i,
+        .title-8,
+        .text-8,
+        .title-4 {
+            color: white;
+        }
+
+        .title-8 {
+            margin-top: 39%;
+            font-size: 35px;
+        }
+
+        .title-4 {
+            margin-top: 28%;
+            font-size: 22px;
+        }
+
+        .item-calender {
+            background: #E4860D;
+        }
+
+        .item-comments {
+            background: #04A06B;
+        }
+
+        .item-tags {
+            background: #3a3a3a;
+        }
+
+        .jCarouselLite ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .button {
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+
+        .jCarouselLite-prev,
+        .jCarouselLite-next {
+            background: #E4860D;
+            padding: 5px 12px;
+            border: none;
+        }
+
+        .jCarouselLite-next i,
+        .jCarouselLite-prev i {
+            color: white;
+        }
+
+        .jCarouselLite-next:not(:disabled),
+        .jCarouselLite-prev:not(:disabled) {
+            cursor: pointer;
+            outline: none;
+        }
+
+        .jCarouselLite-prev-ver {
+            margin-left: 43%;
+            transform: rotate(-90deg);
+            position: absolute;
+            display: block;
+            margin-top: -4%;
+            z-index: 99999;
+        }
+
+        .jCarouselLite-next-ver {
+            transform: rotate(-90deg);
+            position: absolute;
+            display: block;
+            z-index: 99999;
+            margin-top: 137%;
+            margin-left: 43%;
+        }
+
+        .jCarouselLite-prev-hor {
+            position: absolute;
+            display: block;
+            z-index: 99999;
+            margin-left: 2%;
+            margin-top: 34%;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .jCarouselLite-next-hor {
+            position: absolute;
+            display: block;
+            z-index: 99999;
+            margin-left: 94%;
+            margin-top: 34%;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+
+        /*         .jCarouselLite-prev-hor,
+        .jCarouselLite-next-hor {
+            visibility: hidden;
+        }
+
+        .column-8:hover>.jCarouselLite-prev-hor,
+        .column-8:hover>.jCarouselLite-next-hor {
+            visibility: visible;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- News Headlines -->
+    <section id="slider-wrapper">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-8">
+                    <div class="carousel slide-hor">
+                        <button aria-label="Previous" class="jCarouselLite-prev jCarouselLite-prev-hor ">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button aria-label="Next" class="jCarouselLite-next jCarouselLite-next-hor ">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        <div class="jCarouselLite" id="jhorizontal">
+                            <ul class="jCarouselLite-hor" id="jCarouselLite-hor">
+                                <li>
+                                    <div class="card" style="width: 46.3rem; height:33rem;">
+                                        <img src="vendor/img/Image-Layout-3.png" class="card-img" style="height:33rem;"
+                                            alt="...">
+                                        <div class="card-img-overlay">
+                                            <ul class="slider-post-info">
+                                                <li class="slider-post-info-item item-calender"><a><i
+                                                            class="fa fa-calendar"></i><br>16.10.2015</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-comments"><a href="#"><i
+                                                            class="fa fa-comments"></i><br>4</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-tags"><a href="#"><i
+                                                            class="fa fa-tags"></i><br>technology</a></li>
+                                            </ul>
+                                            <h5 class="card-title title-8">Headphone and smartphone along with a cup of
+                                                tee
+                                            </h5>
+                                            <p class="card-text text-8">Alice is a freelance web designer and developer
+                                                based in
+                                                London.
+                                                She is
+                                                specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card" style="width: 46.3rem; height:33rem;">
+                                        <img src="vendor/img/Image-Layout-3.png" class="card-img" style="height:33rem;"
+                                            alt="...">
+                                        <div class="card-img-overlay">
+                                            <ul class="slider-post-info">
+                                                <li class="slider-post-info-item item-calender"><a><i
+                                                            class="fa fa-calendar"></i><br>16.10.2015</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-comments"><a href="#"><i
+                                                            class="fa fa-comments"></i><br>4</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-tags"><a href="#"><i
+                                                            class="fa fa-tags"></i><br>technology</a></li>
+                                            </ul>
+                                            <h5 class="card-title title-8">Headphone and smartphone along with a cup of
+                                                tee
+                                            </h5>
+                                            <p class="card-text text-8">Alice is a freelance web designer and developer
+                                                based in
+                                                London.
+                                                She is
+                                                specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card" style="width: 46.3rem; height:33rem;">
+                                        <img src="vendor/img/Image-Layout-3.png" class="card-img" style="height:33rem;"
+                                            alt="...">
+                                        <div class="card-img-overlay">
+                                            <ul class="slider-post-info">
+                                                <li class="slider-post-info-item item-calender"><a><i
+                                                            class="fa fa-calendar"></i><br>16.10.2015</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-comments"><a href="#"><i
+                                                            class="fa fa-comments"></i><br>4</a>
+                                                </li>
+                                                <li class="slider-post-info-item item-tags"><a href="#"><i
+                                                            class="fa fa-tags"></i><br>technology</a></li>
+                                            </ul>
+                                            <h5 class="card-title title-8">Headphone and smartphone along with a cup of
+                                                tee
+                                            </h5>
+                                            <p class="card-text text-8">Alice is a freelance web designer and developer
+                                                based in
+                                                London.
+                                                She is
+                                                specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <button aria-label="Previous" class="jCarouselLite-prev jCarouselLite-prev-ver">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button aria-label="Next" class="jCarouselLite-next jCarouselLite-next-ver">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    <div class="jCarouselLite jvertical">
+                        <ul class="jCarouselLite-ver" id="jCarouselLite-ver">
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card" style="width: 22rem; height: 11rem;">
+                                    <img src="vendor/img/Image-Layout-7.png" class="card-img" style="height: 11rem;"
+                                        alt="...">
+                                    <div class="card-img-overlay" style="height: 11rem;">
+                                        <h5 class="card-title title-4">Google might announce a new Chromecast this month
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Navigation -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- jCarouselLite core JavaScript -->
+    <script src="vendor/jcarousel/jquery.jcarousellite.js"></script>
+    <!-- Pagination core JavaScript -->
+    <script src="vendor/pagination/js/jquery.simplePagination.js"></script>
+    <!-- Ticker core JavaScript -->
+    <script src="vendor/ticker/js/jquery.ticker.js"></script>
+    <script src="vendor/ticker/js/jquery.newsTicker.js"></script>
+    <!-- main core JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
